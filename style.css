@@ -1,0 +1,57 @@
+:root{--ink:#000;--paper:#fff;--sun:#FFD000;--mist:#F2F2F2;--mute:#3D3D3D;--link:#1D4ED8;color-scheme:light}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:'Archivo',Arial,sans-serif;color:var(--ink);background:var(--paper);font-size:18px;line-height:1.5}
+a{color:var(--link)}
+h1,h2,h3{text-wrap:balance;margin:0}
+p{text-wrap:pretty;margin:0}
+.stripe{height:18px;background:repeating-linear-gradient(135deg,var(--sun) 0 18px,var(--ink) 18px 36px)}
+.wrap{max-width:720px;margin:0 auto;padding-inline:20px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-block:18px}
+.brand{font-weight:800;font-size:16px;color:var(--ink);text-decoration:none}
+.nav{display:flex;gap:18px;font-size:15px;font-weight:600}
+.nav a{color:var(--ink);text-decoration:none;border-bottom:2px solid transparent}
+.nav a:hover,.nav a[aria-current]{border-color:var(--ink)}
+.big{font-size:clamp(56px,14vw,104px);line-height:.88;font-weight:900;font-stretch:70%;letter-spacing:-.01em}
+.h2{font-size:clamp(40px,9vw,60px);line-height:.92;font-weight:900;font-stretch:70%}
+.h3{font-size:clamp(28px,6vw,36px);line-height:1;font-weight:900;font-stretch:75%}
+.lead{font-size:19px;line-height:1.55;max-width:60ch}
+.section{padding-block:44px;display:flex;flex-direction:column;gap:20px}
+.dark{background:var(--ink);color:#fff}
+.dark .h2{color:var(--sun)}
+.box-sun{background:var(--sun);padding:26px;display:flex;flex-direction:column;gap:12px}
+.box-line{border:3px solid var(--ink);padding:26px;display:flex;flex-direction:column;gap:10px}
+.btn{display:flex;align-items:center;justify-content:center;min-height:64px;padding:0 20px;background:var(--ink);color:var(--sun);font-size:20px;font-weight:800;text-decoration:none;text-align:center}
+.btn:hover{color:#fff}
+.note{font-size:14px;color:var(--mute)}
+.rows{display:flex;flex-direction:column;border-top:3px solid var(--ink)}
+.row{padding:16px 0;border-bottom:1px solid var(--ink);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.row b{font-size:20px}
+.price{font-size:clamp(80px,20vw,112px);line-height:.9;font-weight:900;font-stretch:70%}
+.steps{display:flex;flex-direction:column;gap:18px}
+.step{display:flex;gap:16px;align-items:flex-start}
+.num{flex:none;width:44px;height:44px;background:var(--ink);color:var(--sun);display:flex;align-items:center;justify-content:center;font-size:21px;font-weight:900}
+.step-t{font-size:30px;line-height:1;font-weight:900;font-stretch:75%}
+.kit{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.kit a{display:flex;flex-direction:column;gap:6px;padding:22px;border:3px solid var(--ink);color:var(--ink);text-decoration:none}
+.kit a:hover{background:var(--sun)}
+.kit .h3{font-size:30px}
+.foot{margin-top:48px;background:var(--mist);padding-block:28px 32px;font-size:13px;line-height:1.5;color:var(--mute)}
+.foot .wrap{display:flex;flex-direction:column;gap:8px}
+.foot a{color:var(--mute)}
+.label{font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding-top:28px}
+.checks{display:flex;flex-direction:column;border-top:3px solid var(--ink)}
+.checks label{display:flex;gap:14px;align-items:flex-start;padding:16px 0;border-bottom:1px solid var(--ink);cursor:pointer}
+.checks input{flex:none;width:24px;height:24px;margin:2px 0 0;accent-color:var(--ink)}
+.checks input:checked+span{text-decoration:line-through;color:var(--mute)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips a{padding:8px 14px;border:2px solid var(--ink);color:var(--ink);text-decoration:none;font-weight:700;font-size:15px}
+.chips a:hover{background:var(--sun)}
+.cards{display:flex;flex-direction:column;border-top:3px solid var(--ink)}
+.card{padding:18px 0;border-bottom:1px solid var(--ink);display:flex;flex-direction:column;gap:4px}
+.card-h{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.card-h b{font-size:20px}
+.tag{flex:none;padding:3px 9px;background:var(--sun);font-size:13px;font-weight:800}
+.tag.free{background:var(--ink);color:var(--sun)}
+h2[id]{scroll-margin-top:16px}
+@media (max-width:480px){body{font-size:17px}.box-sun,.box-line{padding:22px 18px}}
