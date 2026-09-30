@@ -54,4 +54,4 @@ p{text-wrap:pretty;margin:0}
 .tag{flex:none;padding:3px 9px;background:var(--sun);font-size:13px;font-weight:800}
 .tag.free{background:var(--ink);color:var(--sun)}
 h2[id]{scroll-margin-top:16px}
-@media (max-width:480px){body{font-size:17px}.box-sun,.box-line{padding:22px 18px}}
+@media (max-width:480px){body{font-size:17px}.nav{gap:14px;font-size:14px}.box-sun,.box-line{padding:22px 18px}}
