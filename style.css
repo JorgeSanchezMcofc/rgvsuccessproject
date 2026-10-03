@@ -55,3 +55,10 @@ p{text-wrap:pretty;margin:0}
 .tag.free{background:var(--ink);color:var(--sun)}
 h2[id]{scroll-margin-top:16px}
 @media (max-width:480px){body{font-size:17px}.nav{gap:14px;font-size:14px}.box-sun,.box-line{padding:22px 18px}}
+.jump{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--ink)}
+.jump-in{display:flex;gap:8px;overflow-x:auto;padding-block:10px;scrollbar-width:none}
+.jump-in::-webkit-scrollbar{display:none}
+.jump a{flex:none;color:var(--sun);text-decoration:none;font-weight:700;font-size:14px;padding:6px 12px;border:2px solid var(--sun)}
+.jump a:hover{background:var(--sun);color:var(--ink)}
+section[id]{scroll-margin-top:64px}
+html{scroll-behavior:smooth}

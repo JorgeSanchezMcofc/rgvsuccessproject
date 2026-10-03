@@ -12,15 +12,30 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap">
 <link rel="stylesheet" href="style.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5PVTMJ2XBE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5PVTMJ2XBE');
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a');
+    if (a && /forms\.gle|docs\.google/.test(a.href)) gtag('event', 'form_click', { link_text: a.textContent.trim(), link_url: a.href });
+  });
+</script>
 </head>
 <body>
 <div class="stripe"></div>
 <header class="wrap top">
 <a class="brand" href="./">RGV Success Project</a>
-<nav class="nav"><a href="checklist/">90 days</a><a href="resources/">Resources</a><a href="grow/">Web &amp; marketing</a></nav>
+<nav class="nav"><a href="#join">Join</a><a href="#grow">Web &amp; marketing</a></nav>
 </header>
+<nav class="jump" aria-label="Sections"><div class="wrap jump-in">
+<a href="#ribbon">Ribbon cutting</a><a href="#join">Join</a><a href="#checklist">First 90 days</a><a href="#resources">Free resources</a><a href="#grow">Website &amp; marketing</a>
+</div></nav>
 <main>
-<section class="wrap section" style="padding-top:28px">
+<section id="ribbon" class="wrap section" style="padding-top:28px">
 <p style="font-size:19px;font-weight:500">A free kit for new businesses in the Rio Grande Valley.</p>
 <h1 class="big">You&#39;re open. Now tell the Valley.</h1>
 <div class="box-sun">
@@ -38,7 +53,7 @@
 <p><strong>People find you.</strong> The region&#39;s business community knows you&#39;re open.</p>
 </div></section>
 
-<section class="wrap section">
+<section id="network" class="wrap section">
 <h2 class="h2">Your next customer is in this room.</h2>
 <p class="lead">After the ribbon comes the network. Local businesses meet, buy from and refer each other at Chamber events.</p>
 <div class="rows">
@@ -46,35 +61,125 @@
 <div class="row"><b>Good Day McAllen</b><span>2 tickets included</span></div>
 <div class="row"><b>1 Million Cups</b><span>Present your business</span></div>
 </div>
+</section>
+<section id="gym" class="wrap section">
 <div class="box-line" style="margin-top:12px">
 <h2 class="h3" style="font-size:44px;font-stretch:70%">It works like a gym.</h2>
 <p>Paying doesn&#39;t get you in shape. Showing up does. Give it a few hours a month, go to the events, follow up with the people you meet, and this network works for you.</p>
+</div>
+
+</section>
+<section id="join" class="wrap section" style="padding-top:0">
+<h2 class="h2">Two steps. That&#39;s it.</h2>
+<div class="steps">
+<div class="step"><div class="num">1</div><div><div class="step-t">Join the Chamber.</div><p>Fill out the form and get 10% off your membership.</p></div></div>
+<div class="step"><div class="num">2</div><div><div class="step-t">Schedule your ribbon cutting.</div><p>It&#39;s included. Book it at least two weeks ahead.</p></div></div>
 </div>
 <div class="box-sun">
 <div style="font-weight:700">Community Partner membership</div>
 <div class="price">$540</div>
 <p>A year, with your 10% off. Regularly $600. Includes your ribbon cutting, consulting, Link Up and free Innovation Texas mentoring.</p>
-<a class="btn" href="https://forms.gle/CHQtYJaeCCnxUNzc7">Schedule my ribbon cutting</a>
+<a class="btn" href="https://forms.gle/CHQtYJaeCCnxUNzc7">Join and schedule my ribbon cutting</a>
 </div>
+
+</section>
+
+<section id="checklist" class="wrap section" style="border-top:3px solid var(--ink)">
+<h2 class="h2">Your first 90 days.</h2>
+<p class="lead">The Texas deadlines a new business can&#39;t miss. Check them off as you go. This isn&#39;t a substitute for advice from your accountant.</p>
+<div>
+<div class="label">First few weeks</div>
+<div class="checks"><label><input type="checkbox"><span>Check your letter from the Comptroller. It tells you if you file sales tax monthly, quarterly or yearly.</span></label><label><input type="checkbox"><span><strong>Sales tax is due on the 20th</strong> of the month after each period. Quarterly: January 20, April 20, July 20 and October 20.</span></label><label><input type="checkbox"><span>Get your certificate of occupancy from your city.</span></label><label><input type="checkbox"><span>Using a business name that isn&#39;t yours or your LLC&#39;s? Register it as an assumed name (DBA).</span></label><label><input type="checkbox"><span>Create or claim your Google Business Profile so people find you on Maps.</span></label></div>
+<div class="label">If you&#39;re hiring</div>
+<div class="checks"><label><input type="checkbox"><span><strong>Register with the Texas Workforce Commission</strong> within 10 days of your first payroll.</span></label><label><input type="checkbox"><span>Report every new hire within 20 days of their start date.</span></label></div>
+<div class="label">Mark your calendar</div>
+<div class="checks"><label><input type="checkbox"><span><strong>April 15:</strong> file a rendition of your business property (inventory, furniture, equipment) with the Hidalgo County Appraisal District. Starting in 2026, a $125,000 exemption per location may apply.</span></label><label><input type="checkbox"><span><strong>May 15 of the year after you open:</strong> your first franchise tax report (LLCs and corporations). Under $2,650,000 in revenue, no tax is due, but you still file an information report.</span></label></div>
+</div>
+<p class="note">Sources: <a href="https://comptroller.texas.gov/taxes/sales/">Texas Comptroller</a>, <a href="https://www.twc.texas.gov/programs/unemployment-tax/responsibilities-liable-employer">Texas Workforce Commission</a>.</p>
+</section>
+<script>
+(function(){var k="rgvsp-checklist",s={};try{s=JSON.parse(localStorage.getItem(k)||"{}")}catch(e){}
+document.querySelectorAll(".checks input").forEach(function(b,i){b.checked=!!s[i];b.addEventListener("change",function(){s[i]=b.checked;try{localStorage.setItem(k,JSON.stringify(s))}catch(e){}})})})();
+</script>
+
+<section id="resources" class="wrap section" style="border-top:3px solid var(--ink)">
+<h2 class="h2">Free help in the Valley.</h2><p class="h3" style="font-size:24px">What do you need right now?</p>
+<p class="lead">Pick what fits. Free means anyone can use it. Members means it comes with your Chamber membership.</p>
+<nav class="chips"><a href="#customers">Customers</a><a href="#learn">Learning</a><a href="#help">Help</a><a href="#space">A space</a><a href="#data">Market data</a><a href="#partners">Funding and partners</a></nav>
+
+<h2 id="customers" class="h3" style="padding-top:20px">I want more customers</h2>
+<div class="cards"><div class="card"><div class="card-h"><b>Ribbon cutting</b><span class="tag">Members</span></div><p>Your grand opening, shared with the region&#39;s business community.</p></div><div class="card"><div class="card-h"><b>Link Up</b><span class="tag">Members</span></div><p>Monthly speed networking. Introduce your business in minutes.</p></div><div class="card"><div class="card-h"><b>Good Day McAllen</b><span class="tag">Members</span></div><p>The luncheon that welcomes new members. Two tickets included.</p></div><div class="card"><div class="card-h"><b>Scan &amp; Save</b><span class="tag">Members</span></div><p>Your offer in front of visitors at conventions and tournaments.</p></div><div class="card"><div class="card-h"><b>McAllen Tours</b><span class="tag">Members</span></div><p>Citywide campaigns that send shoppers and diners to member businesses: Foodie Tour, Shop Hop, Fit for Fall and the Holiday Shopping Tour.</p></div></div>
+
+<h2 id="learn" class="h3" style="padding-top:20px">I want to learn</h2>
+<div class="cards"><div class="card"><div class="card-h"><b>1 Million Cups</b><span class="tag free">Free</span></div><p>Hear a local founder every month. Members can present their own business.</p></div><div class="card"><div class="card-h"><b>Innovation Texas</b><span class="tag">Free for members</span></div><p>An accelerator with classes and mentoring. $500 for non-members.</p></div><div class="card"><div class="card-h"><b>Latina Hope</b><span class="tag free">Free</span></div><p>Workshops and a pitch for seed money, for women with small businesses.</p></div><div class="card"><div class="card-h"><b>Grow with Google</b><span class="tag">Members</span></div><p>Digital skills training and Google Career Certificates.</p></div><div class="card"><div class="card-h"><b>Global Entrepreneurship Week</b><span class="tag free">Free</span></div><p>A week of events every November, with a resource expo that puts Valley partners in one room.</p></div><div class="card"><div class="card-h"><b>How to Break a Business</b><span class="tag free">Free</span></div><p>Local owners share their mistakes and what they learned.</p></div></div>
+
+<h2 id="help" class="h3" style="padding-top:20px">I need help</h2>
+<div class="cards"><div class="card"><div class="card-h"><b>Small business consulting</b><span class="tag">Members</span></div><p>One-on-one help with planning and next steps.</p></div><div class="card"><div class="card-h"><b>Free professional consultations</b><span class="tag">Members</span></div><p>30-minute sessions with member professionals in legal, accounting, banking, insurance, HR and real estate.</p></div><div class="card"><div class="card-h"><b>Project Next Move</b><span class="tag free">Free</span></div><p>A quick check-up that points you to the resources that fit.</p></div><div class="card"><div class="card-h"><b>SATOP</b><span class="tag free">Free</span></div><p>Up to 40 free hours of engineering help for a technical problem.</p></div></div>
+
+<h2 id="space" class="h3" style="padding-top:20px">I need a space</h2>
+<div class="cards"><div class="card"><div class="card-h"><b>Virtual office</b><span class="tag">From $100/mo</span></div><p>Working from home? Get a business address, local phone line and mail service at the McAllen Creative Incubator.</p></div><div class="card"><div class="card-h"><b>McAllen Creative Incubator</b><span class="tag">From $250/mo</span></div><p>A creative space on Main Street to work, meet and host, in the heart of downtown McAllen.</p></div><div class="card"><div class="card-h"><b>Old Church</b><span class="tag">From $600/day</span></div><p>An elegant venue for up to 150 guests. Host your launch, a client event or your team&#39;s celebration. Member rate.</p></div></div>
+
+<h2 id="data" class="h3" style="padding-top:20px">I want market data</h2>
+<div class="cards"><div class="card"><div class="card-h"><b>McAllen Economic Pulse</b><span class="tag free">Free</span></div><p>A monthly report on the regional economy to help you understand your market.</p></div><div class="card"><div class="card-h"><b>SizeUp</b><span class="tag">Members</span></div><p>Market research on your competitors, customers and best locations. Included from the $1,500 membership level.</p></div></div>
+
+<h2 id="partners" class="h3" style="padding-top:20px">More free help in the Valley</h2>
+<div class="cards"><div class="card"><div class="card-h"><b>UTRGV Small Business Development Center</b><span class="tag free">Free</span></div><p>One-on-one advising, business plans, financial analysis and help packaging a loan.</p><div><a href="tel:+19566657535">(956) 665-7535</a></div></div><div class="card"><div class="card-h"><b>SCORE South Texas</b><span class="tag free">Free</span></div><p>Mentoring from experienced business owners and executives.</p><div><a href="https://www.score.org/riograndevalley">score.org/riograndevalley</a></div></div><div class="card"><div class="card-h"><b>Workforce Solutions Lower Rio Grande Valley</b><span class="tag free">Free</span></div><p>Help hiring your first employees: recruiting, hiring events and training reimbursements.</p><div><a href="tel:+19569285000">(956) 928-5000</a></div></div><div class="card"><div class="card-h"><b>LiftFund</b><span class="tag">Loans</span></div><p>Small business loans from $500 for businesses that don&#39;t qualify at a traditional bank.</p><div><a href="tel:+19562992551">(956) 299-2551</a></div></div><div class="card"><div class="card-h"><b>Kiva</b><span class="tag">0% loans</span></div><p>Crowdfunded loans from $1,000 to $15,000 with no interest, no fees and no minimum credit score.</p><div><a href="https://www.kiva.org/borrow">kiva.org/borrow</a></div></div><div class="card"><div class="card-h"><b>McAllen Economic Development Corporation</b><span class="tag free">Free</span></div><p>The city&#39;s partner for incentives, site selection and connections to city resources.</p><div><a href="https://www.mcallenedc.com">mcallenedc.com</a></div></div></div>
+
+<div class="box-line" style="margin-top:24px">
+<h2 class="h3">This is just the start.</h2>
+<p>The Chamber runs more than 40 different programs and events a year.</p>
+<a class="btn" href="https://claude.ai/artifact/9AW9AS5KQerejAFcrM3hce">See every program</a>
+</div>
+</section>
+
+<section id="grow" class="wrap section" style="border-top:3px solid var(--ink)">
+<h2 class="h2">Look open online, too.</h2>
+<p class="lead">Your customers look you up before they walk in. We build simple, fast websites and marketing for new Valley businesses, and we show you a free preview before you pay anything.</p>
+<a class="btn" href="https://forms.gle/cYL2gvpMyrDG8BC86">Get my free preview</a>
+<p class="note" style="text-align:center">About 5 minutes. Your preview is ready in 2-3 business days and stays live for 3 days.</p>
 </section>
 
 <section class="dark"><div class="wrap section">
-<h2 class="h2">Need a website or marketing?</h2>
-<p class="lead">Answer a few questions and we&#39;ll design a free preview of your website, or a simple marketing plan for your opening. No cost, no commitment.</p>
-<div class="kit">
-<a href="grow/#web" style="border-color:var(--sun);color:#fff"><span class="h3" style="color:var(--sun)">Free website preview</span><span>Sites from $500. Ready in days, not months.</span></a>
-<a href="grow/#marketing" style="border-color:var(--sun);color:#fff"><span class="h3" style="color:var(--sun)">Marketing that fills the room</span><span>Grand opening kits, social media, ads and flyers.</span></a>
+<h2 class="h2">How it works</h2>
+<div class="steps">
+<div class="step"><div class="num">1</div><div><div class="step-t" style="color:#fff">Tell us about your business.</div><p>What you sell, who you sell to and the look you like.</p></div></div>
+<div class="step"><div class="num">2</div><div><div class="step-t" style="color:#fff">See your free preview.</div><p>A real site with your name, your photos and your colors.</p></div></div>
+<div class="step"><div class="num">3</div><div><div class="step-t" style="color:#fff">Keep it if you love it.</div><p>We launch it on your domain. If not, no hard feelings.</p></div></div>
 </div>
-<a class="btn" href="https://forms.gle/cYL2gvpMyrDG8BC86" style="background:var(--sun);color:var(--ink)">Get my free preview</a>
 </div></section>
 
 <section class="wrap section">
-<h2 class="h3">Also in your free kit</h2>
-<div class="kit">
-<a href="checklist/"><span class="h3">Your first 90 days</span><span>The Texas deadlines a new business can&#39;t miss.</span></a>
-<a href="resources/"><span class="h3">Resources</span><span>Customers, training, help, space and funding in the Valley.</span></a>
+<h2 id="web" class="h2">Websites</h2>
+<p class="lead">One-time price. Mobile-first, English and Spanish, and built to get you calls and visits.</p>
+<div class="cards">
+<div class="card"><div class="card-h"><b>Starter</b><span class="tag">$500</span></div><p>One page with your services, WhatsApp or call button, map and hours, and basic Google setup. One round of changes.</p></div>
+<div class="card"><div class="card-h"><b>Business</b><span class="tag">$750</span></div><p>Up to 5 pages with gallery, reviews, booking link and your Google Business Profile. Two rounds of changes.</p></div>
+<div class="card"><div class="card-h"><b>Pro</b><span class="tag">From $1,000</span></div><p>Online store (up to 20 products) or menu with online ordering and payments, plus a blog. Two rounds of changes.</p></div>
+<div class="card"><div class="card-h"><b>Care plan</b><span class="tag">$39/mo</span></div><p>Hosting, domain, backups and small edits every month. You never have to touch the tech.</p></div>
+</div>
+
+<h2 id="marketing" class="h2" style="padding-top:28px">Marketing</h2>
+<p class="lead">Start with what you need now. No long contracts.</p>
+<div class="cards">
+<div class="card"><div class="card-h"><b>Grand Opening Kit</b><span class="tag">$350</span></div><p>Flyer, 5 social media graphics, Facebook event and Google Business Profile setup.</p></div>
+<div class="card"><div class="card-h"><b>Logo &amp; brand</b><span class="tag">$300</span></div><p>Logo, colors, fonts and business card design.</p></div>
+<div class="card"><div class="card-h"><b>Social media</b><span class="tag">$400/mo</span></div><p>12 posts a month on 2 platforms, designed and written for you.</p></div>
+<div class="card"><div class="card-h"><b>Facebook &amp; Google ads</b><span class="tag">$300/mo + ad spend</span></div><p>Setup, campaigns and a monthly report. We suggest starting with $300 a month in ads.</p></div>
+<div class="card"><div class="card-h"><b>Flyers &amp; banners</b><span class="tag">From $75</span></div><p>Print-ready designs. Printing not included.</p></div>
+</div>
+
+<div class="box-sun" style="margin-top:24px">
+<div class="h3">Not sure what you need?</div>
+<p>Answer a few questions and we&#39;ll recommend a simple plan with clear prices. Free.</p>
+<a class="btn" href="https://forms.gle/cYL2gvpMyrDG8BC86">Get my free preview</a>
 </div>
 </section>
+<section class="dark"><div class="wrap section">
+<h2 class="h2">Ready when you are.</h2>
+<a class="btn" href="https://forms.gle/CHQtYJaeCCnxUNzc7" style="background:var(--sun);color:var(--ink)">Join and schedule my ribbon cutting</a>
+<a class="btn" href="https://forms.gle/cYL2gvpMyrDG8BC86" style="background:transparent;border:3px solid var(--sun);color:var(--sun)">Get my free website preview</a>
+</div></section>
+
 </main>
 <footer class="foot"><div class="wrap">
 <p>RGV Success Project is an independent resource. If you join the McAllen Chamber of Commerce through this kit, we may receive a commission. It doesn&#39;t change the price you pay.</p>
